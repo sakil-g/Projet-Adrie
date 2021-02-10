@@ -1,0 +1,358 @@
+/* NAVBAR */
+.navbar {
+    background: rgb(97,164,68)!important;
+    background: radial-gradient(circle, rgba(97,164,68,1) 84%, rgba(255,255,255,0) 100%)!important;
+}
+/* NAVBAR REMOVE PADDING */
+.res{
+  padding-left: 0px!important;
+  padding-right: 0px;
+}
+
+/* NAVBAR UNDERLINE EFFECT */
+.navbar-container {
+	text-align: center;
+	box-shadow: 0px -20px 5px 20px #333333;
+	font-size: 0;
+}
+
+.navbar-container ul {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.navbar-container ul li {
+	font-size: 16px;
+}
+
+.navbar-container ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px;
+	transition: color 0.5s;
+}
+
+.navbar-container ul li .underline {
+	height: 1.5px;
+	background-color: transparent;
+	width: 0%;
+	transition: width 0.2s, background-color 0.5s;
+	margin-top: -5px;
+}
+
+.navbar-container ul li.active-link .underline {
+	width: 100%;
+	background-color: white;
+}
+
+.navbar-container ul li:hover .underline {
+	background-color: white;
+	width: 100%;
+}
+
+.navbar-container ul li:active a {
+	transition: none;
+	color: rgba(255,255,255,0.76);
+}
+
+.navbar-container ul li:active .underline {
+	transition: none;
+	background-color: rgba(255,255,255,0.76);
+}
+
+/* Footer */
+footer{
+    position:absolute;
+    bottom:0;
+    width: 90%;
+    padding-top:50px;
+    height:50px;
+    }
+.footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+  }
+  
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+.footer-basic li {
+    padding:0 10px;
+  }
+  
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+.footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+.footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+
+  /* Log in Form */
+  .card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: whitesmoke!important;
+    }
+    
+    .card:hover{
+      box-shadow: 0px 0px 10px #9e582a;
+    }
+    
+    .social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+    }
+    
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+    
+    .card-header h3{
+    color: black;
+    }
+    
+    .social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+    }
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: #61a444;
+    color: black;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+    
+    .remember{
+    color: black;
+    }
+    
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+    
+    .login_btn{
+    color: black;
+    background-color: #61a444;
+    width: 100px;
+    font-weight: bold;
+    }
+    
+    .login_btn:hover{
+    color: whitesmoke;
+    background-color: #7edb57;
+    font-weight: bold;
+    }
+    
+    .links{
+    color: black;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }
+
+    /* Registration form */
+    .bg{
+      background-color:#f0ffe9 ;
+    }
+
+    .registration-form{
+      padding: 50px 0;
+    }
+    
+    .registration-form form{
+        max-width: 600px;
+        margin: auto;
+        padding: 50px 70px;
+        border-radius: 30px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    }
+
+    .registration-form form:hover{
+      box-shadow: 0px 0px 10px  #61a444;
+  }
+
+    .registration-form .form-icon{
+      text-align: center;
+        border-radius: 50%;
+        font-size: 40px;
+        color: white;
+        margin: auto;
+        margin-bottom: 50px;
+        line-height: 100px;
+    }
+    
+    .registration-form .item{
+      border-radius: 20px;
+        margin-bottom: 25px;
+        padding: 10px 20px;
+    }
+    
+    .registration-form .create-account{
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #61a444;
+        border: none;
+        color: white;
+        margin-top: 30px;
+    }
+
+    .registration-form .create-account:hover{
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #9cff71;
+      color: black;
+      
+      
+  }
+    
+    .registration-form .social-media{
+        max-width: 600px;
+        background-color: #fff;
+        margin: auto;
+        padding: 35px 0;
+        text-align: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        color: #9fadca;
+        border-top: 1px solid #dee9ff;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    }
+    
+    .registration-form .social-icons{
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+    
+    .registration-form .social-icons a{
+        font-size: 23px;
+        margin: 0 3px;
+        color: #5691ff;
+        border: 1px solid;
+        border-radius: 50%;
+        width: 45px;
+        display: inline-block;
+        height: 45px;
+        text-align: center;
+        background-color: #fff;
+        line-height: 45px;
+    }
+    
+    .registration-form .social-icons a:hover{
+        text-decoration: none;
+        opacity: 0.6;
+    }
+
+    .champs{
+      color: black;
+      font-style: italic;
+
+    }
+
+    #calendar {
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+
+
+  /* Media Queries */
+
+  @media all and (max-width: 375px) {
+   
+    .navbar {
+        background: rgb(97,164,68)!important;
+    }
+    .bienvenue {
+        width: 50%!important;
+    }
+    #connexion {
+        display: none;
+    }
+    .foot {
+      margin-left: -3%!important;
+    }
+    .navbar-container ul li:hover .underline{
+      width: 0%;
+    }
+
+  }
+
+  @media (max-width: 576px) {
+      .registration-form form{
+          padding: 50px 20px;
+          box-shadow: unset!important;
+      }
+  
+      .registration-form .form-icon{
+          width: 70px;
+          height: 70px;
+          font-size: 30px;
+          line-height: 70px;
+          
+      }
+      .logoadrie{
+        margin-top: -20px;
+      }
+     
+  }
