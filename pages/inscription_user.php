@@ -19,7 +19,11 @@
 <div class="bg">
     <div class="registration-form">
         <form method="POST" action="../includes/inscription.php">
+            <div class="input-group-prepend">
+            <a href="#" onClick="history.go(-1)"><div class="arrow"></div></a>
+            </div>
             <div class="d-flex form-icon justify-content-center">
+            
                 <img src="<?php echo BASE_URL . "\img\logo.png";?>" alt="logo" height="120" class="logoadrie">
             </div>
             <div class="input-group form-group mt-3">
@@ -63,6 +67,21 @@
                         <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
                     </div>
                 <input type="date" class="form-control" name="dob">
+            </div>
+            <div id="promotion">
+                    <label class="mb-2" for="promotion">Promotion :</label>
+                    <select class="form-control mb-4" name="promotion" id="promotion">
+                        <!-- Récupérer les promos -->
+                        <?php include_once '../includes/dbh_co.php'; 
+                            $sql = "SELECT * FROM promotion"; 
+                            $result = $db->query($sql); 
+                            if ($result->num_rows > 0) {
+                        // Afficher le résultat de chaque lignes
+                        while($row = $result->fetch_assoc()){
+                            echo '<option value="'.$row['id_promo'].'">'.$row['nom'].' '.$row['promotion'].' </option>';
+                            }
+                        } ?>
+                    </select>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-block create-account" name="connexion">Créer un compte</button>

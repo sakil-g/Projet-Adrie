@@ -27,21 +27,29 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
 <body>
 
 <div class="container">
-    <?php if(isset($_SESSION['username'])){ // Si l'utilisateur est connecté afficher un message de bienvenue
-                    $user = $_SESSION['username'];
-                    // afficher un message
-                    echo "<div class='text-center mt-3 alert alert-success'> Bonjour , $user </div>";
-                } 
-    ?>
     <div class="d-flex flex-column text-center mt-5">
         <h1>
         Liste d'apprenants 
         </h1>
         </div>
-        <p>Promotion :</p>
-        <a class="btn btn-outline-success" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
-        <a class="btn btn-outline-danger" href="#" role="button">Émargement</a>
-        <a class="btn btn-outline-success" href="#" role="button">Emploi du temps</a>
+        <div id="promotion" class="prom" style="width:20%">
+                    <label class="mb-2" for="promotion">Promotion :</label>
+                    <select class="form-control mb-4" name="promotion" id="promotion">
+                        <!-- Récupérer les promos -->
+                        <?php include_once '../includes/dbh_co.php'; 
+                            $sql = "SELECT * FROM promotion"; 
+                            $result = $db->query($sql); 
+                            if ($result->num_rows > 0) {
+                        // Afficher le résultat de chaque lignes
+                        while($row = $result->fetch_assoc()){
+                            echo '<option value="'.$row['id_promo'].'">'.$row['nom'].' '.$row['promotion'].' </option>';
+                            }
+                        } ?>
+                    </select>
+            </div>
+        <a class="btn btn-outline-success mt-3" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
+        <a class="btn btn-outline-danger mt-3" href="#" role="button">Émargement</a>
+        <a class="btn btn-outline-success mt-3" href="#" role="button">Emploi du temps</a>
 
     <section class="container text-center bg-light py-5">
 

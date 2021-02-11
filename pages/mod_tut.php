@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <?php include_once('../config.php'); ?>
 <?php include_once '../includes/dbh_co.php'; //accéder a la base de donnée
  $id = $_GET['id'];

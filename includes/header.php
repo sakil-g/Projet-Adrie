@@ -43,9 +43,8 @@
       echo '<li class="nav-item active">
         <a class="nav-link" href="..\pages\accueil_app.php">Accueil</a>
         <div class="underline"></div>
-      </li>';
-      } ?>
-
+      </li>';} 
+      ?>
       <li class="nav-item">
         <a class="nav-link" href="<?php echo BASE_URL . "pages\accueil_tut.php";?>">Tuteurs</a>
         <div class="underline"></div>

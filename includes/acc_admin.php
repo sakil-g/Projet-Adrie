@@ -21,12 +21,13 @@
 <div class="container">
     <div class="text-center mt-3 alert alert-dark"> Bienvenue ADMIN
     </div>
-    <div class="mt-4">
-    <a class="btn btn-outline-success" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
-    <a class="btn btn-outline-success" href="#" role="button">Emploi du temps</a>
-    <a class="btn btn-outline-danger" href="#" role="button">Émargement</a>
-    <a class="btn btn-outline-success" href="../includes/liste_app.php" role="button">Liste des apprenants</a>
-    <a class="btn btn-outline-success" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
+    <div class="d-flex mt-5 justify-content-center">
+    <a class="btn btn-outline-success mr-1" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
+    <a class="btn btn-outline-success mr-1" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
+    <a class="btn btn-outline-success mr-1" href="#" role="button">Emploi du temps</a>
+    <a class="btn btn-outline-danger mr-1" href="#" role="button">Émargement</a>
+    <a class="btn btn-outline-success mr-1" href="../includes/liste_app.php" role="button">Liste des apprenants</a>
+    <a class="btn btn-outline-success mr-1" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
     </div>
     <div id="calendar"></div>
 </div>

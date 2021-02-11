@@ -9,6 +9,8 @@
     $email = htmlentities($_POST['email']);
     $tel = htmlentities($_POST['numero']);
     $dob = htmlentities($_POST['dob']);
+    $promotion= $_POST['promotion'];
+    
 
     //converti la date en format EUR
     $res=explode('-',$dob); 
@@ -19,12 +21,28 @@
 
     $sql = "INSERT INTO utilisateur (id_user,username, mdp,nom,prenom,email,numero,dob,role_id,tuteur) VALUES (NULL,'$username','$mdp','$nom','$prenom','$email','$tel','$new',2,0);";
     $rec = "SELECT id_user FROM utilisateur ORDER BY id_user DESC LIMIT 1";
-    if (mysqli_query($db, $sql)) {
+    $resulat = [];
+
+    if (mysqli_query($db, $sql)) 
+    {
+      $result = mysqli_query($db, $rec);
+      $user= $result->fetch_assoc();
+    
+    $id_user = $user['id_user'];
+    $request = "INSERT INTO utilisateur_promotion (id_user, id_promo,tuteur) VALUES ('$id_user','$promotion',0);";
+      if (mysqli_query($db, $request)) {
+        $resulat = array("succes" => true);
         header("location:../index.php");
-  } else {
-        echo "Erreur : " . $sql . "<br>" . mysqli_error($db);
-  }
-  mysqli_close($db);
+      } else {
+        $resulat = array("succes" => false);
+        $resulat["erreur"] = "Error: " . $request . "<br>" . mysqli_error($db);
+      }
+    } else {
+      $resulat = array("succes" => false);
+      $resulat["erreur"] = "Error: " . $sql . "<br>" . mysqli_error($db);
+    }
+    mysqli_close($db);
+    return $resulat;
   }
   enregistrerDansBase($db);
 ?>
