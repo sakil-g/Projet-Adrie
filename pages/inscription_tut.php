@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Formulaire d'ajout tuteur / tutrice</title>
+	<title>Formulaire d'inscription</title>
    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--Bootsrap 4 CDN-->
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -18,7 +18,7 @@
 <body>
 <div class="bg">
     <div class="registration-form">
-        <form method="POST" action="../includes/inscription.php">
+        <form method="POST" action="../includes/add_tut.php">
             <div class="input-group-prepend">
             <a href="#" onClick="history.go(-1)"><div class="arrow"></div></a>
             </div>

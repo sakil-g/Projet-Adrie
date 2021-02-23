@@ -18,12 +18,13 @@
     <title>Admin</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="text-center mt-3 alert alert-dark"> Bienvenue ADMIN
     </div>
     <div class="d-flex mt-5 justify-content-center">
     <a class="btn btn-outline-success mr-1" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
     <a class="btn btn-outline-success mr-1" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
+    <a class="btn btn-outline-success mr-1" href="../pages/inscription_tut.php" role="button">Ajouter un tuteur</a>
     <a class="btn btn-outline-success mr-1" href="#" role="button">Emploi du temps</a>
     <a class="btn btn-outline-danger mr-1" href="#" role="button">Émargement</a>
     <a class="btn btn-outline-success mr-1" href="../includes/liste_app.php" role="button">Liste des apprenants</a>

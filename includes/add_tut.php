@@ -29,10 +29,10 @@
       $user= $result->fetch_assoc();
     
     $id_user = $user['id_user'];
-    $request = "INSERT INTO utilisateur_promotion (id_user, id_promo,tuteur) VALUES ('$id_user','$promotion',0);";
+    $request = "INSERT INTO utilisateur_promotion (id_user, id_promo,tuteur) VALUES ('$id_user','$promotion',1);";
       if (mysqli_query($db, $request)) {
         $resulat = array("succes" => true);
-        header("location:../index.php");
+        header("location:../pages/accueil_admin.php");
       } else {
         $resulat = array("succes" => false);
         $resulat["erreur"] = "Error: " . $request . "<br>" . mysqli_error($db);

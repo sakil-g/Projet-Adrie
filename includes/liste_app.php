@@ -1,13 +1,19 @@
 <?php session_start(); ?>
 <?php include_once('../config.php'); ?>
 <?php include_once('header.php');  ?>
-<?php
+<?php //include_once '../includes/dbh_co.php';
 include './dbh_co.php';
 if (!isset($_SESSION['username']) || $_SESSION['username']!='admin') {
     header("location: ../index.php");
     exit;
 }
 session_write_close(); // fermeture de la session pour éviter les warning si t'en ré-ouvres une dans ta page.
+?>
+<?php 
+    
+    if (isset ($_GET['valider'])){
+    $idpromo = $_GET ['promotion'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,86 +38,75 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
         Liste d'apprenants 
         </h1>
         </div>
-        <div id="promotion" class="prom" style="width:20%">
+        <div id="promotiondiv" class="prom" style="width:20%">
+            <form method="POST" action="" id="promotion">
+                <input type="text" hidden value="<?php echo $result['id_user']?>" name = 'id' id="test">
                     <label class="mb-2" for="promotion">Promotion :</label>
                     <select class="form-control mb-4" name="promotion" id="promotion">
                         <!-- Récupérer les promos -->
-                        <?php include_once '../includes/dbh_co.php'; 
+                        <?php 
+                            $compteur = 0; 
+                            $selected = false;
                             $sql = "SELECT * FROM promotion"; 
                             $result = $db->query($sql); 
                             if ($result->num_rows > 0) {
+                                
                         // Afficher le résultat de chaque lignes
-                        while($row = $result->fetch_assoc()){
-                            echo '<option value="'.$row['id_promo'].'">'.$row['nom'].' '.$row['promotion'].' </option>';
+                            while($row = $result->fetch_assoc()){
+                                    if($compteur == 0){$selected = "selected=selected";}else{$selected = "";}
+                                    echo '<option value="'.$row['id_promo'].' " '.$selected.'>'
+                                    .$row['nom'].' '.$row['promotion'].' </option>';
+                                    $compteur++;
+                                }
                             }
-                        } ?>
+                        ?>
                     </select>
-            </div>
+                    
+            </form>
+        </div>
+        
         <a class="btn btn-outline-success mt-3" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
         <a class="btn btn-outline-danger mt-3" href="#" role="button">Émargement</a>
         <a class="btn btn-outline-success mt-3" href="#" role="button">Emploi du temps</a>
-
-    <section class="container text-center bg-light py-5">
-
+    
+    <section id="utilisateurs" class="container text-center bg-light py-5">
+    </section>
+    <p class="lead">
             
-            <table class="table" id="test">
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prénom</th>
-                        <th scope="col">Date de naissance</th>
-                        <th scope="col">E-mail</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php include 'dbh_co.php'; //accéder a la base de donnée
-                    $sql = "SELECT * FROM utilisateur WHERE role_id = '2';" ; //selectionner la base de donnée UTILISATEUR
-                    $result = $db->query($sql);
-                    if ($result->num_rows > 0) { 
-                    while($row = $result->fetch_assoc()) 
-                    echo    '<tr> 
-                    <td>' .$row["nom"].'</td>
-                    <td>' .$row["prenom"].'</td>
-                    <td>' .$row["dob"].'</td>
-                    <td>' .$row["email"].'</td>
-                    <td>
-                        <form method="POST" enctype="multipart/form-data" action="../pages/mod_app.php?id='.$row['id_user'].'">
-                            <input class="btn-sm btn-primary mb-4" type="submit" value="Modifier" name="" >
-                        </form>
-             
-                        <button type="button" class="btn-sm btn-secondary modalBtn" onclick= supApp("'.$row['id_user'].'") data-toggle="modal" data-target="#supmodal">
-                        Supprimer
-                        </button>
-                    </td>
-                    </td>
-                    </tr>';
-                    }
-                    else {
-                    echo "0 resultats trouvés";
-                    }
-                    $db->close();
-                    ?>
-                </tbody>
-            </table>
-        </section>
-            <p class="lead">
-            <button id="pdf" class="btn btn-danger">EN .PDF</button>
-            <button id="txt" class="btn btn-success">EN .TEXT</button>
-            </p>
+
+    </p>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
-<script src="../js/tableHTMLExport.js"></script>    
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
+
+
 <script>
-      $("#pdf").on("click", function () {
-        $("#test").tableHTMLExport({ type: "pdf", filename: "sample.pdf" });
-      });
-      $("#txt").on("click", function () {
-        $("#test").tableHTMLExport({ type: "txt", filename: "sample.txt" });
-      });
+$(document).ready(function(){
+    $("#promotion").change(function(){
+
+        var promo = $(this).children("option:selected").val();
+        if(promo != "undefined"){
+            $.ajax({
+                url: 'http://127.0.0.1/edsa-adrie_proj/includes/section_utilisateur.php?promotion='+promo,
+                async : true,
+                method:"GET",
+                //data:{promotion: value},
+                success: (data) => {
+                    console.log(data)
+                    $("#utilisateurs").html(data);
+                    
+                },
+                error: (data) => {
+                }
+            });
+            console.log(promo)
+            //console.log("a")
+
+        };
+    })
+
+});
 </script>
 <?php include '../modal/modal_app.php'; ?>
 </body>
 </html>
-

@@ -5,12 +5,19 @@
                     
                     $id = $_GET['id'];
                     // sql to delete a record
-                    $sql = "DELETE FROM utilisateur WHERE id_user=$id";
+                    $sql = "DELETE FROM utilisateur WHERE id_user=$id;";
+                    $rec = "DELETE FROM utilisateur_promotion WHERE id_user=$id;";
                     
                     if ($db->query($sql) === TRUE) {
+                    if ($db->query($rec) === TRUE ){
                         $_SESSION['flash'] = 'Apprenant supprimer avec succès'; // Message de confirmation de suppresion 
-                        header("Location: ../includes/liste_app.php");
-                    } else {
+                        header("Location: ../includes/liste_app.php"); 
+                    }
+                    else {
+                        echo "Erreur de suppression de l'apprenant: " . $db->error;
+                    }
+                    } 
+                    else {
                         echo "Erreur de suppression de l'apprenant: " . $db->error;
                     }
                     
