@@ -1,13 +1,10 @@
 <?php include_once '../includes/dbh_co.php'; //accéder a la base de donnée
-        
                     // Start a Session
                     if (!session_id()) @session_start();
-                    
                     $id = $_GET['id'];
                     // sql to delete a record
                     $sql = "DELETE FROM utilisateur WHERE id_user=$id;";
                     $rec = "DELETE FROM utilisateur_promotion WHERE id_user=$id;";
-                    
                     if ($db->query($sql) === TRUE) {
                     if ($db->query($rec) === TRUE ){
                         $_SESSION['flash'] = 'Apprenant supprimer avec succès'; // Message de confirmation de suppresion 
@@ -15,11 +12,10 @@
                     }
                     else {
                         echo "Erreur de suppression de l'apprenant: " . $db->error;
-                    }
+                        }
                     } 
                     else {
                         echo "Erreur de suppression de l'apprenant: " . $db->error;
-                    }
-                    
+                        }
                     $db->close();
-                    ?>
+?>
