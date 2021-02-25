@@ -87,7 +87,7 @@ $(document).ready(function(){
         var promo = $(this).children("option:selected").val();
         if(promo != "undefined"){
             $.ajax({
-                url: 'http://127.0.0.1/edsa-adrie_proj/includes/section_utilisateur.php?promotion='+promo,
+                url: 'https://adrieprojet.herokuapp.com/includes/section_utilisateur.php?promotion='+promo,
                 async : true,
                 method:"GET",
                 //data:{promotion: value},

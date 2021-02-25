@@ -25,23 +25,7 @@
             <div class="d-flex form-icon justify-content-center">
                 <img src="<?php echo BASE_URL . "\img\logo.png";?>" alt="logo" height="120" class="logoadrie">
             </div>
-            <?php 
-
-            if(sizeof($_SESSION['flash']) > 0){
-            if($_SESSION['flash'][0]=false){
-                $class = 'bg-danger';
-            }
-            else{
-                $class = 'bg-success';
-            }
-            $card = '<div class="card '.$class.' ">
-                <div class="card-body">
-              '.$_SESSION['flash'][1].'
-                </div>
-            </div>';
-            echo $card;
-            }
-            ?>
+        
             <div class="input-group form-group mt-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
