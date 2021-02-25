@@ -1,6 +1,24 @@
 <?php 
 // connexion à la base de données
     include './dbh_co.php';
+    var_dump($_POST);
+    require_once('../controller/Valid_inscription.php'); // j'appel ma function validation qui se retrouve dans le fichier controllers 
+    if(isset($_POST["inscription"])){ // 
+        $validation = validerDonneesFormInscription($_POST); // 
+        if(!$validation["valide"]){
+            $message = '<div class=" container mt-5 text-center alert alert-danger">'.$validation["message"].'</div>';
+            echo $message;
+        }else{
+            $resultatDeSauvegarde = enregistrerDansBase($db);
+            if($resultatDeSauvegarde["succes"]){
+               header("Location:../test.php"); // si tous les traitements son bon j'afiche  ma page d'accueil
+            }else{
+                $message = '<div class=" container mt-5 alert alert-danger">'.$resultatDeSauvegarde["erreur"].'</div>';
+                echo $message;
+            }
+        }
+    }
+
   function enregistrerDansBase($db){
     $username = htmlentities($_POST['username']);
     $mdp = htmlentities($_POST['password']);
@@ -13,11 +31,18 @@
     
 
     //converti la date en format EUR
+    if(strlen($dob) >= 8){
     $res=explode('-',$dob); 
     $date=$res[2];
     $month=$res[1];
     $year=$res[0];
     $new=$date.'-'.$month.'-'.$year;
+    }
+    else{
+      session_start();
+      $_SESSION['flash'] = ['false','Entrer une date'];
+      header("location:../pages/inscription_user.php");
+    }
 
     $sql = "INSERT INTO utilisateur (id_user,username, mdp,nom,prenom,email,numero,dob,role_id) VALUES (NULL,'$username','$mdp','$nom','$prenom','$email','$tel','$new',2);";
     $rec = "SELECT id_user FROM utilisateur ORDER BY id_user DESC LIMIT 1";

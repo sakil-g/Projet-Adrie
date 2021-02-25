@@ -28,9 +28,6 @@ if(isset($_POST['user']) && isset($_POST['mdp'])) //récupere les $_POST du form
             if($_SESSION['user']['role_id']==2){ //redirection quand connecté en tant qu'apprenant
                  header('Location: ../pages/accueil_app.php');
             }
-            if($_SESSION['user']['tuteur']==1){
-                header('Location: ../pages/accueil_tut.php'); //redirection quand on est connecté en tant que tuteur
-            }
             if ($_SESSION['user']['role_id']==1){
                 header('Location: ../pages/accueil_admin.php'); //redirection quand on est connecté en tant qu'admin
             }

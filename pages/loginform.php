@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Page de connexion</title>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--Fontawesome CDN-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-</head>
 <body>
 <!-- Formulaire de connexion -->
 <div class="container-fluid">
@@ -38,14 +29,17 @@
                 </div>
                 <div class="card-footer mt-3">
                     <div class="d-flex justify-content-center links">
-                        Pas de compte ?<a href="./pages/inscription_user.php">S'inscrire</a>
+                        Pas de compte ?<a href=<?php echo BASE_URL . "pages/inscription_user.php";?>>S'inscrire</a>
                     </div>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center" >
                         <a href="#">Mot de passe oublié?</a>
                     </div>
                 </div>
             </div>
         </div>
 </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </body>
 </html>

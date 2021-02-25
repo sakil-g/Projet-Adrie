@@ -16,7 +16,7 @@
   <div class="container-fluid navbar-container res">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="http://www.adrie.fr">
-          <img src="<?php echo BASE_URL . "img\logo.png";?>" alt="logo" height="50" class="logoAdrie">
+          <img src="<?php echo BASE_URL . "img/logo.png";?>" alt="logo" height="50" class="logoAdrie">
         </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -34,23 +34,23 @@
       <?php
       if(isset($_SESSION['user']) && $_SESSION['user']['tuteur'] == 1){ //redirige vers ACCUEIL tuteur si on est dans la session tuteur
       echo '<li class="nav-item active">
-        <a class="nav-link" href="..\pages\accueil_tut.php">Accueil</a>
+        <a class="nav-link" href="../pages/accueil_tut.php">Accueil</a>
         <div class="underline"></div>
       </li>';
       } ?>
        <?php
       if(isset($_SESSION['user']) && $_SESSION['user']['role_id'] == 2){ //redirige vers ACCUEIL tuteur si on est dans la session tuteur
       echo '<li class="nav-item active">
-        <a class="nav-link" href="..\pages\accueil_app.php">Accueil</a>
+        <a class="nav-link" href="../pages/accueil_app.php">Accueil</a>
         <div class="underline"></div>
       </li>';} 
       ?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo BASE_URL . "pages\accueil_tut.php";?>">Tuteurs</a>
+        <a class="nav-link" href="<?php echo BASE_URL . "pages/accueil_tut.php";?>">Tuteurs</a>
         <div class="underline"></div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo BASE_URL . "pages\accueil_app.php";?>">Apprenants</a>
+        <a class="nav-link" href="<?php echo BASE_URL . "pages/accueil_app.php";?>">Apprenants</a>
         <div class="underline"></div>
       </li>
       <!-- Affiche le menu ADMIN que si l'utilisateur est connecter en tant qu'admin -->
