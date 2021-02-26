@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Bootsrap 4 CDN-->
-    <link rel="stylesheet" href="<?php echo BASE_URL . "/css/bootstrap.min.css";?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL . "css/bootstrap.min.css";?>">
     <!--Fontawesome CDN-->
 	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo BASE_URL . "/css/style.css"; ?>">
+    <link rel="stylesheet" href="<?php echo BASE_URL . "css/style.css"; ?>">
     <!-- Anime CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <title> Page de connexion </title>
