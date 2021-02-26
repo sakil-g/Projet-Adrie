@@ -106,6 +106,32 @@ $(document).ready(function(){
     })
 
 });
+
+
+$(window).load(function(){
+    $("#promotion").change(function(){
+
+        var promo = $(this).children("option:selected").val();
+        if(promo != "undefined"){
+            $.ajax({
+                    url: 'https://adrieprojet.herokuapp.com/includes/section_utilisateur.php?promotion='+promo,
+                    async : true,
+                    method:"GET",
+                    //data:{promotion: value},
+                    success: (data) => {
+                        console.log(data)
+                        $("#utilisateurs").html(data);
+                        
+                    },
+                    error: (data) => {
+                    }
+                });
+            console.log(promo)
+            //console.log("a")
+
+        };
+    })  
+});
 </script>
 <?php include '../modal/modal_app.php'; ?>
 </body>
