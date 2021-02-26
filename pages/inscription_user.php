@@ -30,7 +30,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                     </div>
-                <input type="text" class="form-control " placeholder="Nom d'utilisateur*" name="username">
+                <input type="text" class="form-control " placeholder="Nom d'utilisateur*" name="username" required>
             </div>
             <div class="input-group form-group mt-3">
                     <div class="input-group-prepend">
@@ -42,25 +42,25 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="far fa-address-book"></i></span>
                     </div>
-                <input type="text" class="form-control " placeholder="Nom*" name="nom">
+                <input type="text" class="form-control " placeholder="Nom*" name="nom" required>
             </div>
             <div class="input-group form-group mt-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="far fa-id-card"></i></span>
                     </div>
-                <input type="text" class="form-control " placeholder="Prénom*" name="prenom">
+                <input type="text" class="form-control " placeholder="Prénom*" name="prenom" required>
             </div>
             <div class="input-group form-group mt-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-at"></i></span>
                     </div>
-                <input type="text" class="form-control " placeholder="E-mail*" name="email">
+                <input type="text" class="form-control " placeholder="E-mail*" name="email" required>
             </div>
             <div class="input-group form-group mt-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-phone"></i></span>
                     </div>
-                <input type="tel" class="form-control " placeholder="Numéro de téléphone*" name="numero">
+                <input type="tel" class="form-control " placeholder="Numéro de téléphone*" name="numero" required>
             </div>
             <div class="input-group form-group mt-3">
                     <div class="input-group-prepend">
