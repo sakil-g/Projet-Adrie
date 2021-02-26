@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php include_once('../config.php'); ?>
-<?php include_once('header.php');  ?>
-<?php //include_once '../includes/dbh_co.php';
+
+<?php 
 include './dbh_co.php';
 if (!isset($_SESSION['username']) || $_SESSION['username']!='admin') {
     header("location: ../index.php");
@@ -29,6 +29,7 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <title>Liste des apprenants</title>
+    <?php include_once('header.php');  ?>
 </head>
 <body>
 
