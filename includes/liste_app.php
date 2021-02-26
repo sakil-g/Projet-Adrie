@@ -97,6 +97,7 @@ $(document).ready(function(){
                     error: (data) => {
                     }
                 });
+        }
             console.log(promo)
     $("#promotion").change(function(){
 
@@ -121,7 +122,6 @@ $(document).ready(function(){
         };
     })
 
-});
 });
 </script>
 <?php include '../modal/modal_app.php'; ?>
