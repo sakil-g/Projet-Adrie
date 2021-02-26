@@ -1,3 +1,6 @@
+<?php session_start();
+var_dump($_SESSION);?>
+
 <?php include_once('../config.php'); ?>
 <!DOCTYPE html>
 <html>
