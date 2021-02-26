@@ -11,7 +11,6 @@
         }else{
             $resultatDeSauvegarde = enregistrerDansBase($db);
             if($resultatDeSauvegarde["succes"]){
-               header("Location:../test.php"); // si tous les traitements son bon j'afiche  ma page d'accueil
             }else{
                 $message = '<div class=" container mt-5 alert alert-danger">'.$resultatDeSauvegarde["erreur"].'</div>';
                 echo $message;
@@ -43,7 +42,7 @@
       $_SESSION['flash'] = ['false','Entrer une date'];
       header("location:../pages/inscription_user.php");
     }
-
+    //fonction pour insérer les données que l'on à récuperer dans le $_POST dans la base de données MYSQL
     $sql = "INSERT INTO utilisateur (id_user,username, mdp,nom,prenom,email,numero,dob,role_id) VALUES (NULL,'$username','$mdp','$nom','$prenom','$email','$tel','$new',2);";
     $rec = "SELECT id_user FROM utilisateur ORDER BY id_user DESC LIMIT 1";
     $resulat = [];

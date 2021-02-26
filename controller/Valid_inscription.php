@@ -1,6 +1,6 @@
 <?php
-    function validerDonneesFormInscription($data ) { // toutes mes verification des champ commence ici
-        $champs = [                                                 // je crée d'abord un tableau à verifier
+    function validerDonneesFormInscription($data ) { // Création de la fonction qui va nous permettre de verifier les données
+        $champs = [                                  // Ici on crée un tableau ou l'on récupere les champs dans notre formulaire
           array("key" => "username", "libele" => "Nom d'utilisateur"),
           array("key" => "password", "libele" => "Mot de passe"),
           array("key" => "nom", "libele" => "Nom"),           
@@ -11,7 +11,7 @@
         ];  
         
         
-        foreach ($champs as $value){ // à l'aide de la fonction foreach je parcours le tableau pour verifier les champs
+        foreach ($champs as $value){ // à l'aide de la fonction foreach je parcours le tableau pour verifier les données insérer dans les champs
           if ( !isset($data[$value["key"]]) || $data[$value["key"]] == "" ) {
             return array("valide" => false, "message" => 'Renseignez le champ : "'.$value["libele"].'"');   
           }
