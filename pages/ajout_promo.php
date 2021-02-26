@@ -28,10 +28,10 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
 <div class="bg">
     <div class="registration-form">
         <form method="POST" action="../includes/add_prom.php">
-            <div class="d-flex form-icon justify-content-center">
             <div class="input-group-prepend">
-            <a href="#" onClick="history.go(-1)"><div class="arrow"></div></a>
+                <a href="#" onClick="history.go(-1)"><div class="arrow"></div></a>
             </div>
+            <div class="d-flex form-icon justify-content-center">
                 <img src="<?php echo BASE_URL . "\img\logo.png";?>" alt="logo" height="120" class="logoadrie">
             </div>
                 <div class="input-group form-group mt-3">
