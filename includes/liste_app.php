@@ -54,7 +54,7 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
                         // Afficher le résultat de chaque lignes
                             while($row = $result->fetch_assoc()){
                                     if($compteur == 0){$selected = "selected=selected";}else{$selected = "";}
-                                    echo '<option value="'.$row['id_promo'].' " '.$selected.'>'
+                                    echo '<option class="optionPromotion" value="'.$row['id_promo'].' " '.$selected.'>'
                                     .$row['nom'].' '.$row['promotion'].' </option>';
                                     $compteur++;
                                 }
@@ -82,7 +82,8 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
 
 <script>
 $(document).ready(function(){
-    var promo = $(this).children("option:selected").val();
+    optionPromotion = document.querySelectorAll('.optionPromotion')
+    var promo = optionPromotion[0].value
         if(promo != "undefined"){
             $.ajax({
                     url: 'https://adrieprojet.herokuapp.com/includes/section_utilisateur.php?promotion='+promo,
@@ -92,7 +93,6 @@ $(document).ready(function(){
                     success: (data) => {
                         console.log(data)
                         $("#utilisateurs").html(data);
-                        
                     },
                     error: (data) => {
                     }
@@ -100,8 +100,7 @@ $(document).ready(function(){
         }
             console.log(promo)
     $("#promotion").change(function(){
-
-        var promo = $(this).children("option:selected").val();
+        var promo =  $(this).children("option:selected").val();
         if(promo != "undefined"){
             $.ajax({
                 url: 'https://adrieprojet.herokuapp.com/includes/section_utilisateur.php?promotion='+promo,
