@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo BASE_URL . "/css/style.css"; ?>">
     <!-- Anime CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <title> Page de connexion </title>
 </head>
 <body>
   <div class="container-fluid navbar-container res">
