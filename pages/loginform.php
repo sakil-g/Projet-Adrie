@@ -32,7 +32,7 @@
                         Pas de compte ?<a href=<?php echo BASE_URL . "pages/inscription_user.php";?>>S'inscrire</a>
                     </div>
                     <div class="d-flex justify-content-center" >
-                        <a href="#">Mot de passe oublié?</a>
+                        <a href="#" style="color: transparent;">Mot de passe oublié?</a>
                     </div>
                 </div>
             </div>

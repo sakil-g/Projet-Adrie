@@ -81,13 +81,14 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
 
 
 <script>
+//Récupere la valeur de la premiere option 
 $(document).ready(function(){
     optionPromotion = document.querySelectorAll('.optionPromotion')
     var promo = optionPromotion[0].value
+    // Si la promotion est bien défini on l'a récupere pour la rajouter a la requete AJAX qui nous affichera ensuite les informations demandées
         if(promo != "undefined"){
             $.ajax({
                     url: 'https://adrieprojet.herokuapp.com/includes/section_utilisateur.php?promotion='+promo,
-                    async : true,
                     method:"GET",
                     //data:{promotion: value},
                     success: (data) => {
@@ -99,12 +100,12 @@ $(document).ready(function(){
                 });
         }
             console.log(promo)
+            // Si l'on choisi une autre promotion elle est ainsi récuperer afin d'afficher les utilisateurs de cette promotion
     $("#promotion").change(function(){
         var promo =  $(this).children("option:selected").val();
         if(promo != "undefined"){
             $.ajax({
                 url: 'https://adrieprojet.herokuapp.com/includes/section_utilisateur.php?promotion='+promo,
-                async : true,
                 method:"GET",
                 //data:{promotion: value},
                 success: (data) => {
