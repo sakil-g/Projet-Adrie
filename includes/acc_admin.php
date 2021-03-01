@@ -22,6 +22,18 @@
     <div class="text-center mt-3 alert alert-dark animate__animated animate__fadeInDown"> Bienvenue ADMIN
     </div>
     <div class="d-flex mt-5 justify-content-center">
+    <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+    </div>
     <a class="btn btn-outline-success mr-1" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
     <a class="btn btn-outline-success mr-1" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
     <a class="btn btn-outline-success mr-1" href="../pages/inscription_tut.php" role="button">Ajouter un tuteur</a>
