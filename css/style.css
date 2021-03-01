@@ -355,6 +355,10 @@ footer{
       width: 100%!important;
     }
 
+    .conn{
+      width: 50%!important;
+    }
+
   }
 
   @media (max-width: 576px) {
