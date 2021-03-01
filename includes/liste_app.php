@@ -28,14 +28,14 @@ session_write_close(); // fermeture de la session pour éviter les warning si t'
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    <title class="animate__animated animate__bounceInDown">Liste des apprenants</title>
+    <title>Liste des apprenants</title>
     <?php include_once('header.php');  ?>
 </head>
 <body>
 
 <div class="container">
     <div class="d-flex flex-column text-center mt-5">
-        <h1>
+        <h1 class="animate__animated animate__bounceInDown">
         Liste d'apprenants 
         </h1>
         </div>
