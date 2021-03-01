@@ -1,15 +1,11 @@
-# Application APRUN 
+# Application ADRIE
 
-Bienvenue sur l'application APRUN, une application "carnet de bord apprenant". 
+Bienvenue sur l'application ADRIE, une application "carnet de bord apprenant". 
 
 ## Users stories 
 
 | En tant que  |  je veux | afin de | critères d'acceptations |
 |--|--|--|---------|
-| Tuteur |voir les heures de présence/absence de mes apprenants | vérifier si ils sont assidus| Afficher la liste des apprenants et leur nombre d'heures de présence/absence|
-|Tuteur|voir l'historique depuis entrée en formation | pouvoir les suivre depuis le début et ne rien manquer | Afficher chaque jour et voir si l'apprenant a été absent ou pas| 
-|Formateur|valider les émargements du jour ou signaler une erreur et signer|noter et mettre à jour les absents|Afficher la liste des apprenants et les mettre "présent" ou "absent" | 
-|Formateur|pouvoir signaler un retard|pas mettre un apprenant absent|Ajouter une option pour signaler qu'un apprenant est en retard | 
 |Apprenant | accèder à mes heures de présence/absence | pouvoir justifier une absence | Afficher les absences | 
 |Apprenant|pouvoir envoyer un justificatif d'absence | d'annuler une absence | Envoyer un mail à l'admin |
 |Admin|créer des comptes apprenants | que les apprenants puissent se connecter | Enregistrer les données du compte dans la BDD | 
@@ -19,18 +15,20 @@ Bienvenue sur l'application APRUN, une application "carnet de bord apprenant".
 |Admin|associer un tuteur et ses apprenants | que le tuteur puisse voir la liste d'apprenants|Créer un lien tuteur et apprenant|
 |Admin|modifier l'emploi du temps|pouvoir gérer les changements ou les absences d'un formateur | CRUD |
 |Admin|modifier les données d'un compte|modifier des données fausses|CRUD|
+| Tuteur |voir les heures de présence/absence de mes apprenants | vérifier si ils sont assidus| Afficher la liste des apprenants et leur nombre d'heures de présence/absence|
+|Tuteur|voir l'historique depuis entrée en formation | pouvoir les suivre depuis le début et ne rien manquer | Afficher chaque jour et voir si l'apprenant a été absent ou pas| 
 
 ## Charte Graphique 
 
-Les couleurs figurant sur le logo d'Aprun sont reprises. 
+Les couleurs figurant sur le logo de l'ADRIE sont utilisées. 
 
-### Bleu ciel  #87CEEB 
+### Vert foncé  #61a444
 
 ![Couleur_bleu](ressources/charte_graphique/bleu_ciel.png)
 
 Le bleu ciel comme l'indique son nom permet de rappeler le ciel mais également d'apporter une sensation de fraîcheur et de liberté à l'application. 
 
-### Orange Foncé #FF8C00 & Orange #FFA500
+### Vert clair #9cff71
 
 ![Couleur_orange_fonce](ressources/charte_graphique/orange_fonce.png)
 
@@ -38,9 +36,7 @@ Des couleurs qui nous font penser à la terre battue, qui nous donnent envie de 
 
 ![Couleur_orange](ressources/charte_graphique/orange.png)
 
-### Rouge foncé #8B0000
 
-![Couleur_rouge_fonce](ressources/charte_graphique/rouge_fonce.png)
 
 ### Logos 
 
@@ -50,15 +46,9 @@ Des couleurs qui nous font penser à la terre battue, qui nous donnent envie de 
 
 ![logo_aprun](ressources/charte_graphique/logo_aprun.jpg)
 
-### Polices
-
-Roboto Regular 400
-
-https://fonts.googleapis.com/css2?family=Roboto
 
 ## Liens 
 
-RétroPlanning : https://docs.google.com/spreadsheets/d/1-OZspMg5eReFDhdKkctEjD-S19sc3MbbATm0_8DFcDU/edit#gid=0
 
 Wireframe : https://www.figma.com/file/X6LAkTmoHSNxezwnLw4TgY/APRUN?node-id=0%3A1
 
