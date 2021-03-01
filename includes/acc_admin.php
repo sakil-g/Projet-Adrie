@@ -23,7 +23,7 @@
     </div>
     <div class="d-flex mt-5 justify-content-center mobileList">
     <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle mr-1 mBottom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-primary dropdown-toggle mr-1 Mbottom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Ajouter
   </button>
     <div class="dropdown-menu">
@@ -33,10 +33,10 @@
         <a class="dropdown-item" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
     </div>
     </div>
-    <a class="btn btn-outline-success mr-1 mBottom" href="#" role="button">Emploi du temps</a>
-    <a class="btn btn-outline-danger mr-1 mBottom" href="#" role="button">Émargement</a>
-    <a class="btn btn-outline-success mr-1 mBottom" href="../includes/liste_app.php" role="button">Liste des apprenants</a>
-    <a class="btn btn-outline-success mr-1 mBottom" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
+    <a class="btn btn-outline-success mr-1 Mbottom" href="#" role="button">Emploi du temps</a>
+    <a class="btn btn-outline-danger mr-1 Mbottom" href="#" role="button">Émargement</a>
+    <a class="btn btn-outline-success mr-1 Mbottom" href="../includes/liste_app.php" role="button">Liste des apprenants</a>
+    <a class="btn btn-outline-success mr-1 Mbottom" href="../includes/liste_tut.php" role="button">Liste des tuteurs</a>
     </div>
     <div id="calendar"></div>
 </div>
