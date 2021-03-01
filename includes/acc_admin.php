@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="text-center mt-3 alert alert-dark"> Bienvenue ADMIN
+    <div class="text-center mt-3 alert alert-dark animate__animated animate__fadeInDown"> Bienvenue ADMIN
     </div>
     <div class="d-flex mt-5 justify-content-center">
     <a class="btn btn-outline-success mr-1" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
