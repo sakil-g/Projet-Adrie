@@ -24,17 +24,16 @@ Les couleurs figurant sur le logo de l'ADRIE sont utilisées.
 
 ### Vert foncé  #61a444
 
-![Couleur_bleu](ressources/charte_graphique/bleu_ciel.png)
+![Couleur_vert_foncé](ressources/charte_graphique/vert_foncé.png)
 
-Le bleu ciel comme l'indique son nom permet de rappeler le ciel mais également d'apporter une sensation de fraîcheur et de liberté à l'application. 
+Il représente la stabilité et l'équilibre.
 
 ### Vert clair #9cff71
 
-![Couleur_orange_fonce](ressources/charte_graphique/orange_fonce.png)
+![Couleur_Vert_Clair](ressources/charte_graphique/vert_clair.png)
 
-Des couleurs qui nous font penser à la terre battue, qui nous donnent envie de bouger et d'être à l'extérieur. 
-
-![Couleur_orange](ressources/charte_graphique/orange.png)
+Résultat de recherche d'images pour "vert clair signification"
+Couleur de l'espérance, le vert est porteur de chance. Il invite au calme et au repos.
 
 
 
