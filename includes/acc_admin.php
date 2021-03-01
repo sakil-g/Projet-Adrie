@@ -24,7 +24,7 @@
     <div class="d-flex mt-5 justify-content-center">
     <div class="btn-group">
   <button type="button" class="btn btn-primary dropdown-toggle mr-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Ajout
+    Ajouter
   </button>
     <div class="dropdown-menu">
         <a class="dropdown-item" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
