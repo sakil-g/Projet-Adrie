@@ -24,13 +24,13 @@ Les couleurs figurant sur le logo de l'ADRIE sont utilisées.
 
 ### Vert foncé  #61a444
 
-![Couleur_vert_foncé](ressources/charte_graphique/vert foncé.png)
+![Couleur_vert_foncé](ressources/charte_graphique/vertfoncé.png)
 
 Il représente la stabilité et l'équilibre.
 
 ### Vert clair #9cff71
 
-![Couleur_Vert_Clair](ressources/charte_graphique/vert clair.png)
+![Couleur_Vert_Clair](ressources/charte_graphique/vertclair.png)
 
 Résultat de recherche d'images pour "vert clair signification"
 Couleur de l'espérance, le vert est porteur de chance. Il invite au calme et au repos.
