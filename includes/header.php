@@ -74,7 +74,7 @@
       </form></li>';
     }else{
       echo '<li class="nav-item mt-1"><form method="POST" action="">
-      <input type="submit" value="Se connecter" class="btn btn-primary w-100" name="connexion">
+      <input type="submit" value="Se connecter" class="btn btn-primary w-100 animate__animated animate__zoomIn" name="connexion">
       </form></li>';}
     ?>
     </ul>
