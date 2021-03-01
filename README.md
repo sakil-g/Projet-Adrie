@@ -47,7 +47,7 @@ Couleur de l'espérance, le vert est porteur de chance. Il invite au calme et au
 ## Liens 
 
 
-Wireframe : https://www.figma.com/file/X6LAkTmoHSNxezwnLw4TgY/APRUN?node-id=0%3A1
+Wireframe : https://www.figma.com/file/V8eBy0U5Z9iHVQNBbVPNxQ/PROJET-ADRIE
 
-Méthode Kanban : https://trello.com/b/t45zuHkj/aprun
+Méthode Kanban : https://trello.com/b/kOmq6CVc/adrieprojet
 
