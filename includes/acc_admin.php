@@ -27,15 +27,12 @@
     Ajout
   </button>
     <div class="dropdown-menu">
-        <a class="btn btn-outline-success" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
-        <a class="btn btn-outline-success" href="../pages/inscription_tut.php" role="button">Ajouter un tuteur</a>
+        <a class="btn" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
+        <a class="btn" href="../pages/inscription_tut.php" role="button">Ajouter un tuteur</a>
         <div class="dropdown-divider"></div>
-        <a class="btn btn-outline-success" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
+        <a class="btn" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
     </div>
     </div>
-    <a class="btn btn-outline-success mr-1" href="../pages/ajout_promo.php" role="button">Ajouter une promo</a>
-    <a class="btn btn-outline-success mr-1" href="../pages/inscription_user.php" role="button">Ajouter un apprenant</a>
-    <a class="btn btn-outline-success mr-1" href="../pages/inscription_tut.php" role="button">Ajouter un tuteur</a>
     <a class="btn btn-outline-success mr-1" href="#" role="button">Emploi du temps</a>
     <a class="btn btn-outline-danger mr-1" href="#" role="button">Émargement</a>
     <a class="btn btn-outline-success mr-1" href="../includes/liste_app.php" role="button">Liste des apprenants</a>
