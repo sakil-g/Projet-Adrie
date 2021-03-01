@@ -9,7 +9,7 @@ Bienvenue sur l'application ADRIE, une application "carnet de bord apprenant".
 |Apprenant | accèder à mes heures de présence/absence | pouvoir justifier une absence | Afficher les absences | 
 |Apprenant|pouvoir envoyer un justificatif d'absence | d'annuler une absence | Envoyer un mail à l'admin |
 |Admin|créer des comptes apprenants | que les apprenants puissent se connecter | Enregistrer les données du compte dans la BDD | 
-|Admin|créer des comptes formateurs | que les formateurs puissent se connecter | Enregistrer les données du compte dans la BDD |
+|Admin|créer des comptes tuteurs | que les formateurs puissent se connecter | Enregistrer les données du compte dans la BDD |
 |Admin|créer les promotions | d'affecter les apprenants à une promotion | Enregistrer les données du compte dans la BDD |
 |Admin|associer une promotion à des apprenants|lister les apprenants de la promotion|Créer un lien entre une promotion et des apprenants  | 
 |Admin|associer un tuteur et ses apprenants | que le tuteur puisse voir la liste d'apprenants|Créer un lien tuteur et apprenant|
