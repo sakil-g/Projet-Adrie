@@ -358,6 +358,13 @@ footer{
     .conn{
       width: 50%!important;
     }
+    .mobileList{
+      flex-wrap: wrap;
+    }
+
+    .Mbottom{
+      margin-bottom: .5rem!important;
+    }
 
   }
 
