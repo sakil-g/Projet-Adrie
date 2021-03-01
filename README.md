@@ -43,7 +43,7 @@ Couleur de l'espérance, le vert est porteur de chance. Il invite au calme et au
 
 ![deconnexion](ressources/charte_graphique/logout.png)
 
-![logo_aprun](ressources/charte_graphique/logo_aprun.jpg)
+![logo_aprun](ressources/charte_graphique/logo.jpg)
 
 
 ## Liens 
