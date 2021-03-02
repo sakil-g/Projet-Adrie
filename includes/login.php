@@ -12,7 +12,7 @@ if(isset($_POST['user']) && isset($_POST['mdp'])) //récupere les $_POST du form
     
     if($username !== "" && $password !== "")
     {   $requeteUser = "SELECT * FROM utilisateur where 
-        username = '".$username."' and mdp = '".$password."'limit 1 " ;
+        username = '".$username."' and mdp = '".md5($password)."'limit 1 " ;
         $requete = "SELECT count(*) FROM utilisateur where 
               username = '".$username."' and mdp = '".md5($password)."' ";
         $exec_requete = mysqli_query($db,$requete);
