@@ -42,7 +42,7 @@
       header("location:../pages/inscription_user.php");
     }
     //fonction pour insérer les données que l'on à récuperer dans le $_POST dans la base de données MYSQL
-    $sql = "INSERT INTO utilisateur (id_user,username, mdp,nom,prenom,email,numero,dob,role_id) VALUES (NULL,'$username','$mdp','$nom','$prenom','$email','$tel','$new',2);";
+    $sql = "INSERT INTO utilisateur (id_user,username, mdp,nom,prenom,email,numero,dob,role_id) VALUES (NULL,'$username', md5('$mdp'),'$nom','$prenom','$email','$tel','$new',2);";
     $rec = "SELECT id_user FROM utilisateur ORDER BY id_user DESC LIMIT 1";
     $resulat = [];
 
