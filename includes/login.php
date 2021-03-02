@@ -14,7 +14,7 @@ if(isset($_POST['user']) && isset($_POST['mdp'])) //récupere les $_POST du form
     {   $requeteUser = "SELECT * FROM utilisateur where 
         username = '".$username."' and mdp = '".$password."'limit 1 " ;
         $requete = "SELECT count(*) FROM utilisateur where 
-              username = '".$username."' and mdp = '".$password."' ";
+              username = '".$username."' and mdp = '".md5($password)."' ";
         $exec_requete = mysqli_query($db,$requete);
         $result =mysqli_query($db,$requeteUser);
         $reponse      = mysqli_fetch_array($exec_requete);
