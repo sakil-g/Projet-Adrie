@@ -1,7 +1,6 @@
 <?php 
 // connexion à la base de données
     include './dbh_co.php';
-    var_dump($_POST);
     require_once('../controller/Valid_inscription.php'); // j'appel ma function validation qui se retrouve dans le fichier controllers 
     if(isset($_POST["inscription"])){ // 
         $validation = validerDonneesFormInscription($_POST); // 
@@ -16,6 +15,22 @@
                 echo $message;
             }
         }
+    }
+
+    if(isset($_POST['inscription'])) 
+    { 
+      if(empty($_POST['username'])) || empty($_POST['password']))
+      {
+        echo '<script>alert("les deux champs sont requis")</script>';
+      }
+      else
+      {
+        $utilisateur = mysqli_real_escape_string($db,$_POST['username']);
+        $pw = mysqli_real_escape_string($db,$_POST['password']);
+        $pw = password_hash($pw, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO utilisateur (id_user,username, mdp,nom,prenom,email,numero,dob,role_id) VALUES (NULL,'$username','$mdp','$nom','$prenom','$email','$tel','$new',2);";
+      }
+
     }
 
   function enregistrerDansBase($db){
