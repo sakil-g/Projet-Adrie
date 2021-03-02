@@ -55,6 +55,7 @@
     $request = "INSERT INTO utilisateur_promotion (id_user, id_promo,tuteur) VALUES ('$id_user','$promotion',0);";
       if (mysqli_query($db, $request)) {
         $resulat = array("succes" => true);
+        echo '<script>alert("Enregistrement réussi")</script>';
         header("location:../index.php");
       } else {
         $resulat = array("succes" => false);
