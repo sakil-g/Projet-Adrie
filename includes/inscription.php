@@ -56,7 +56,6 @@
       if (mysqli_query($db, $request)) {
         $resulat = array("succes" => true);
         echo '<script>alert("Enregistrement réussi")</script>';
-        header("location:../index.php");
       } else {
         $resulat = array("succes" => false);
         $resulat["erreur"] = "Error: " . $request . "<br>" . mysqli_error($db);
