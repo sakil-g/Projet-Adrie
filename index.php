@@ -5,3 +5,15 @@
 <br>
 <?php include_once('./includes/footer.php'); ?>
 
+<?php
+
+$month = "[".date("d")."/".date("m")."/".date("y")."]";
+$hour = "[".date("H").":".date("i").":".date("s")."]";
+$url = $_SERVER['REMOTE_ADDR']."connect to".$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
+$reunion = $month.$hour.$url."/n";
+
+echo $reunion;
+
+
+
+?>
