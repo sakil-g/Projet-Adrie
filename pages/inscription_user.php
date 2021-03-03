@@ -23,7 +23,7 @@
             <a href="#" onClick="history.go(-1)"><div class="arrow"></div></a>
             </div>
             <div class="d-flex form-icon justify-content-center">
-                <img src="<?php echo BASE_URL . "\img\logo.png";?>" alt="logo" height="120" class="logoadrie">
+                <img src="<?php echo BASE_URL . "img/logo.png";?>" alt="logo" height="120" class="logoadrie">
             </div>
         
             <div class="input-group form-group mt-3">
