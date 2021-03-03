@@ -17,7 +17,6 @@
 
 </head>
 <body>
-<div class="bg">
     <div class="registration-form">
         <form method="POST" action="../includes/inscription.php">
             <div class="input-group-prepend">
@@ -90,8 +89,6 @@
             <div> <p class="champs"> Tout les champs muni d'une * sont obligatoires </p></div>
         </form>
     </div>
-</div>
-
 </body>
 </html>
 
