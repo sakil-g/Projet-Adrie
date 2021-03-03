@@ -12,8 +12,8 @@ $hour = "[".date("H").":".date("i").":".date("s")."]";
 $url = $_SERVER['REMOTE_ADDR']."connect to".$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
 $reunion = $month.$hour.$url. "\n";
 echo $reunion;
-$files = fopen("logs.txt", "a+");
+$files = fopen("../logs.txt", "a+");
 fputs($files,$reunion);
 fclose($files);
-get_ressource_type($files);
+
 ?>
