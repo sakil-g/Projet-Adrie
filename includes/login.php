@@ -34,6 +34,7 @@ if(isset($_POST['user']) && isset($_POST['mdp'])) //récupere les $_POST du form
         }
         else
         {
+            error_log("ERROR LOGGIN");
            header('Location: ../pages/error.php'); // utilisateur ou mot de passe incorrect
         }
     }
