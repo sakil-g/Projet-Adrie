@@ -15,5 +15,5 @@ echo $reunion;
 $files = fopen("logs.txt", "a+");
 fputs($files,$reunion);
 fclose($files);
-var_dump($files);
+get_ressource_type($files);
 ?>
