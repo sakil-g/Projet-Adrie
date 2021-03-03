@@ -40,6 +40,7 @@ if(isset($_POST['user']) && isset($_POST['mdp'])) //récupere les $_POST du form
     }
     else
     {
+        error_log("Champs prérequis vide");
        header('Location: ../index.php'); // utilisateur ou mot de passe vide
     }
 }
